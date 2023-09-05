@@ -58,7 +58,7 @@ impl Passthrough {
     pub fn start(&self) -> Result<()> {
         let fp = fp(&self.session);
         unsafe {
-            cvt((fp.passthrough_pause)(self.handle))?;
+            cvt((fp.passthrough_start)(self.handle))?;
         }
         Ok(())
     }
